@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="20dp"
+    android:paddingBottom="30dp"
+    tools:context=".FirstFragment">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_baseline_fort_24"
+        app:layout_constraintBottom_toTopOf="@+id/textview_first"
+        />
+
+    <TextView
+        android:id="@+id/textview_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick a file"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/file_picker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/file_picker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pick file"
+        app:layout_constraintBottom_toTopOf="@+id/compress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/compress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Compress"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/encrypt"
+        app:layout_constraintEnd_toStartOf="@+id/uncompress"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/uncompress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Uncompress"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/decrypt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/compress" />
+
+    <Button
+        android:id="@+id/encrypt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Encrypt"
+        android:layout_marginRight="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/decrypt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/decrypt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="Decrypt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/encrypt" />
+</androidx.constraintlayout.widget.ConstraintLayout>
